@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  pokemonapi:
+    image: ${DOCKER_REGISTRY-}pokemonapi
+    build:
+      context: .
+      dockerfile: src/PokemonApi/Dockerfile
+      target: final
+
+  pokemonweb:
+    image: ${DOCKER_REGISTRY-}pokemonweb
+    build:
+      context: .
+      dockerfile: src/PokemonWeb/Dockerfile
+      target: final
+
+  pokemonseeder:
+    image: ${DOCKER_REGISTRY-}pokemonseeder
+    build:
+      context: .
+      dockerfile: src/PokemonSeeder/Dockerfile
+      target: final
+
+  db:
+    image: mongo:5.0.0-rc2

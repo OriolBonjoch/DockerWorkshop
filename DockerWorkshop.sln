@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokemonApi", "src\PokemonApi\PokemonApi.csproj", "{7A8812B2-694A-4706-8A08-074A3B01CAC3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokemonWeb", "src\PokemonWeb\PokemonWeb.csproj", "{E8A41D25-F614-4444-98D2-77D442945409}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokemonSeeder", "src\PokemonSeeder\PokemonSeeder.csproj", "{47EBB267-6AFC-4253-B63E-3B90938AE3EE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokemonApi.Test.Integration", "src\PokemonApi.Test.Integration\PokemonApi.Test.Integration.csproj", "{3DEECACA-3E2A-436A-8FCB-FAE279F23239}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokemonCore.Test", "src\PokemonCore.Test\PokemonCore.Test.csproj", "{65690FF7-02B9-41D9-B76F-143AB8AE3C61}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokemonCore", "src\PokemonCore\PokemonCore.csproj", "{D8EEF6D2-7410-450D-BD55-E58023CD2F44}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{6A5721E3-0F8D-40D2-9182-2A80BCFBF17F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A8812B2-694A-4706-8A08-074A3B01CAC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A8812B2-694A-4706-8A08-074A3B01CAC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A8812B2-694A-4706-8A08-074A3B01CAC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A8812B2-694A-4706-8A08-074A3B01CAC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8A41D25-F614-4444-98D2-77D442945409}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8A41D25-F614-4444-98D2-77D442945409}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8A41D25-F614-4444-98D2-77D442945409}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8A41D25-F614-4444-98D2-77D442945409}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47EBB267-6AFC-4253-B63E-3B90938AE3EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47EBB267-6AFC-4253-B63E-3B90938AE3EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47EBB267-6AFC-4253-B63E-3B90938AE3EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47EBB267-6AFC-4253-B63E-3B90938AE3EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DEECACA-3E2A-436A-8FCB-FAE279F23239}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DEECACA-3E2A-436A-8FCB-FAE279F23239}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DEECACA-3E2A-436A-8FCB-FAE279F23239}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DEECACA-3E2A-436A-8FCB-FAE279F23239}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65690FF7-02B9-41D9-B76F-143AB8AE3C61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65690FF7-02B9-41D9-B76F-143AB8AE3C61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65690FF7-02B9-41D9-B76F-143AB8AE3C61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65690FF7-02B9-41D9-B76F-143AB8AE3C61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8EEF6D2-7410-450D-BD55-E58023CD2F44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8EEF6D2-7410-450D-BD55-E58023CD2F44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8EEF6D2-7410-450D-BD55-E58023CD2F44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8EEF6D2-7410-450D-BD55-E58023CD2F44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A5721E3-0F8D-40D2-9182-2A80BCFBF17F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A5721E3-0F8D-40D2-9182-2A80BCFBF17F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A5721E3-0F8D-40D2-9182-2A80BCFBF17F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A5721E3-0F8D-40D2-9182-2A80BCFBF17F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7866B279-D276-418A-BB6E-9534970916F4}
+	EndGlobalSection
+EndGlobal

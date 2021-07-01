@@ -1,0 +1,44 @@
+version: '3.4'
+
+services:
+  pokemonapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - DatabaseSettings__ConnectionString=mongodb://db:27017
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+
+  pokemonweb:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - PokemonsApi=http://pokemonapi/
+    ports:
+      - "3000:80"
+      - "3001:443"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      
+  pokemonseeder:
+    environment:
+      - DatabaseSettings__ConnectionString=mongodb://db:27017
+    entrypoint: ["/bin/sh", "-c", "/app/seed-and-wait.sh"]
+
+  pokemontest:
+    image: ${DOCKER_REGISTRY-}pokemontest
+    build:
+      context: .
+      dockerfile: src/PokemonApi/Dockerfile
+      target: integrationtests
+    environment:
+      - DatabaseSettings__ConnectionString=mongodb://db:27017
+    volumes:
+      - ./results:/tmp/results:rw
+    depends_on:
+      pokemonseeder:
+        condition: service_healthy
+      pokemonapi:
+        condition: service_healthy
