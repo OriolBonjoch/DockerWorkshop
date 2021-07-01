@@ -1,0 +1,13 @@
+.hover-trainer {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    background-color: white;
+}
+
+.hover-trainer:hover {
+    transition: opacity 1s ease-in-out;
+    opacity: 0.8;
+    cursor: pointer;
+}

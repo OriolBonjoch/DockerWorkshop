@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "PokemonSeeder": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
