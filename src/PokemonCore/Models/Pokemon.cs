@@ -18,5 +18,9 @@ namespace PokemonCore.Models
         public object Species { get; set; }
 
         public int Experience { get; set; }
+
+        public bool Catched { get; set; }
+
+        public bool Fainted { get; set; }
     }
 }

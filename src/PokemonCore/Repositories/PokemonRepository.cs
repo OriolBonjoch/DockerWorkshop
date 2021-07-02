@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace PokemonCore.Repositories
 {
-    public class PokemonRepository
+    public class PokemonRepository : IPokemonRepository
     {
         private readonly IMongoCollection<Pokemon> _pokemons;
 
@@ -17,7 +17,7 @@ namespace PokemonCore.Repositories
             _pokemons = database.GetCollection<Pokemon>(settings.PokemonCollectionName);
         }
 
-        public List<Pokemon> Get() =>
+        public IEnumerable<Pokemon> Get() =>
             _pokemons.Find(pokemon => true).ToList();
 
         public Pokemon Get(string id) =>

@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PokemonCore.Models;
+using PokemonCore.Repositories;
+using PokemonCore.Services;
 using System.Collections.Generic;
 
 namespace PokemonApi.Controllers
@@ -8,10 +10,20 @@ namespace PokemonApi.Controllers
     [Route("[controller]")]
     public class PokemonController : ControllerBase
     {
+        private readonly IPokemonService _pokemonService;
+        private readonly IPokemonRepository _pokemonRepository;
+
+        public PokemonController(IPokemonService pokemonService, IPokemonRepository pokemonRepository)
+        {
+            _pokemonService = pokemonService;
+            _pokemonRepository = pokemonRepository;
+        }
+
         [HttpGet]
         public ActionResult<IEnumerable<Pokemon>> Get()
         {
-            return Ok();
+            var pokemons = _pokemonRepository.Get();
+            return Ok(pokemons);
         }
 
         [HttpPut("/train/{id}")]
